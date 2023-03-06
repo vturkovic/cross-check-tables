@@ -20,6 +20,28 @@
   background: #C3CED9;
 }
 
+table {
+  width: 100%;
+  border: 1px solid black;
+  user-select: none;
+}
+table thead th {
+  background: #E9E9E9;
+  color: black;
+  padding: 5px;
+}
+table tbody td {
+  padding: 10px;
+}
+
+.even {
+  background: #9EC1E1;
+}
+
+.odd {
+  background: #DBDBDB;
+}
+
 .app {
   display: flex;
   flex-direction: row;

@@ -1,6 +1,9 @@
 import './styles/App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import SidebarComponent from './components/sidebarComponent/sidebarComponent';
+import TableComponent from './components/tableComponent/tableComponent';
+import { surfacesColumnData } from './data/surfaces/columnData';
+import { surfacesRowData } from './data/surfaces/rowData';
 
 const App = () => {
   return (
@@ -21,7 +24,7 @@ const App = () => {
 
               <Routes>
                 <Route path="/" />
-                <Route path="surfaces/" />
+                <Route path="surfaces/" element={<TableComponent columns={surfacesColumnData} data={surfacesRowData} />}/>
                 <Route path="pvp-p/" />
                 <Route path="pvp-v/" />
                 <Route path="pvp-sr/" />
