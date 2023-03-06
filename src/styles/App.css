@@ -1,0 +1,41 @@
+.sidebar {
+  user-select: none;
+}
+.sidebar .ps-menu-button.ps-open span {
+  font-weight: bold;
+}
+.sidebar .active {
+  font-weight: bold;
+}
+.sidebar span {
+  font-size: 12px;
+}
+.sidebar .submenu {
+  background: #627f9b;
+}
+.sidebar .submenu .sub2menu {
+  background: #959EA6;
+}
+.sidebar .submenu .sub3menu {
+  background: #C3CED9;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+.app .sidebar-container {
+  background: #292a2d;
+}
+.app .content-container h2 {
+  text-align: center;
+}
+.app .content-container .select-container {
+  margin: 5px;
+}
+.app .content-container .select-container select {
+  margin-left: 5px;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,30 @@
+.sidebar {
+    user-select: none;
+
+    .ps-menu-button.ps-open {
+        span {
+            font-weight: bold;
+        }
+    }
+    
+    .active {
+        font-weight: bold;
+    }
+
+    span {
+        font-size: 12px;
+    }
+
+    .submenu {
+        background: #627f9b;
+
+        .sub2menu {
+            background: #959EA6
+        }
+
+        .sub3menu {
+            background: #C3CED9
+        }
+    }
+    
+}

@@ -1,0 +1,25 @@
+@import '../components/sidebarComponent/sidebarComponent.scss';
+
+.app {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+
+    .sidebar-container {
+        background: #292a2d
+    }
+
+    .content-container {
+        h2 {
+            text-align: center;
+        }
+          
+        .select-container {
+            margin: 5px;
+        }
+        
+        .select-container select {
+            margin-left: 5px;
+        }
+    }
+}
