@@ -1,26 +1,30 @@
 @import '../components/sidebarComponent/sidebarComponent.scss';
 @import '../components/tableComponent/tableComponent.scss';
+@import '../components/yearSelectComponent/yearSelectComponent.scss';
 
 .app {
     display: flex;
-    flex-direction: row;
     min-height: 100vh;
 
     .sidebar-container {
+        position: relative;
+        left: -1px;
         background: #292a2d
     }
 
     .content-container {
-        h2 {
-            text-align: center;
-        }
-          
+        display: flex;
+        flex-direction: column;
         .select-container {
-            margin: 5px;
+            padding-left: 50px;
+            height: 40px;
+            display: flex;
+            align-items: center;
         }
         
         .select-container select {
             margin-left: 5px;
+            height: 26px;
         }
     }
 }

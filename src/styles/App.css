@@ -20,6 +20,18 @@
   background: #C3CED9;
 }
 
+.collapseButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: left 0.4s ease-out;
+}
+
+.open {
+  left: 280px;
+  transform: rotate(180deg);
+}
+
 table {
   width: 100%;
   border: 1px solid black;
@@ -44,20 +56,26 @@ table tbody td {
 
 .app {
   display: flex;
-  flex-direction: row;
   min-height: 100vh;
 }
 .app .sidebar-container {
+  position: relative;
+  left: -1px;
   background: #292a2d;
 }
-.app .content-container h2 {
-  text-align: center;
+.app .content-container {
+  display: flex;
+  flex-direction: column;
 }
 .app .content-container .select-container {
-  margin: 5px;
+  padding-left: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 .app .content-container .select-container select {
   margin-left: 5px;
+  height: 26px;
 }
 
 /*# sourceMappingURL=app.css.map */
