@@ -54,6 +54,24 @@ table tbody td {
   background: #DBDBDB;
 }
 
+.farm-select-container {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding-left: 50px;
+}
+.farm-select-container div {
+  margin-right: 20px;
+}
+.farm-select-container select {
+  margin-left: 2px;
+  height: 26px;
+}
+.farm-select-container input {
+  height: 20px;
+  width: 60px;
+}
+
 .app {
   display: flex;
   min-height: 100vh;
@@ -66,16 +84,6 @@ table tbody td {
 .app .content-container {
   display: flex;
   flex-direction: column;
-}
-.app .content-container .select-container {
-  padding-left: 50px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-}
-.app .content-container .select-container select {
-  margin-left: 5px;
-  height: 26px;
 }
 
 /*# sourceMappingURL=app.css.map */

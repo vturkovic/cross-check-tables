@@ -1,0 +1,21 @@
+.farm-select-container {
+
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding-left: 50px;
+
+    div {
+        margin-right: 20px;
+    }
+
+    select {
+        margin-left: 2px;
+        height: 26px;
+    }
+
+    input {
+        height: 20px;
+        width: 60px;
+    }
+}

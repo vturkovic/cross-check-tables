@@ -1,10 +1,9 @@
 import './styles/App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import SidebarComponent from './components/sidebarComponent/sidebarComponent';
-import YearSelectComponent from './components/yearSelectComponent/yearSelectComponent';
+import FarmSelectComponent from './components/farmSelectComponent/farmSelectComponent';
 import TableComponent from './components/tableComponent/tableComponent';
-import { surfacesColumnData } from './data/surfaces/columnData';
-import { surfacesRowData } from './data/surfaces/rowData';
+import { routes } from './routes';
 
 const App = () => {
   return (
@@ -14,23 +13,15 @@ const App = () => {
           <SidebarComponent />
         </div>
         <div className='content-container'>
-            <YearSelectComponent />
+            <FarmSelectComponent />
             <Routes>
-              <Route path="/" />
-              <Route path="surfaces/" element={<TableComponent columns={surfacesColumnData} data={surfacesRowData} />}/>
-              <Route path="pvp-p/" />
-              <Route path="pvp-v/" />
-              <Route path="pvp-sr/" />
-              <Route path="kfk/" />
-              <Route path="muk/" />
-              <Route path="mkš/" />
-              <Route path="tvpv/" />
-              <Route path="ekop/" />
-              <Route path="eko/" />
-              <Route path="cattle/" />
-              <Route path="amounts/" />
-              <Route path="ezp/" />
-              <Route path="*" element={<Navigate to="/" />} /> 
+              {routes.map((route, index) => (
+                <Route key={index} path={route.path} element={
+                  route.component === null ? null :
+                  route.component.navigate ? <Navigate to={route.component.to} /> :
+                  <TableComponent columns={route.component.columns} data={route.component.data} />
+                } />
+              ))}
             </Routes>
         </div>
       </Router>
