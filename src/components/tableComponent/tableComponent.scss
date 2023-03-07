@@ -1,7 +1,12 @@
+.table-container {
+    margin: 0px 15px;
+}
+
 table {
     width: 100%;
     border: 1px solid black;
     user-select: none;
+
 
     thead {
         th {

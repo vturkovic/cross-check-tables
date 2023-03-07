@@ -9,14 +9,14 @@ import { getRoutes } from './routes';
 const App = () => {
 
   const [selectedYear, setSelectedYear] = useState('2023');
-  const [defaultView, setdefaultView] = useState(true);
+  const [detailedView, setDetailedView] = useState(false);
 
   const handleYearChange = (year: string) => {
     setSelectedYear(year);
   };
 
   const handleDefaultViewChange = (isChecked: boolean) => {
-    setdefaultView(isChecked);
+    setDetailedView(isChecked);
   };
 
   return (
@@ -28,7 +28,7 @@ const App = () => {
         <div className='content-container'>
             <FarmSelectComponent onYearChange={handleYearChange} onDefaultViewChange={handleDefaultViewChange}/>
             <Routes>
-              {getRoutes(defaultView, selectedYear).map((route, index) => (
+              {getRoutes(detailedView, selectedYear).map((route, index) => (
                 <Route key={index} path={route.path} element={
                   route.component === null ? null :
                   route.component.navigate ? <Navigate to={route.component.to} /> :

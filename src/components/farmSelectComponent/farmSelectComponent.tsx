@@ -32,7 +32,7 @@ const FarmSelectComponent = ({ onYearChange, onDefaultViewChange }: FarmSelectPr
           type="switch"
           id="custom-switch"
           label="Detaljni prikaz"
-          defaultChecked={true}
+          defaultChecked={false}
           onChange={handleSwitchChange}
         />
       </Form>
