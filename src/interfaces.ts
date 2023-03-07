@@ -1,9 +1,14 @@
+export type FarmSelectPropsType = {
+    onYearChange: (year: string) => void;
+};
+
 export interface surfacesColumnInterface {
     Header: string,
     accessor: string
 }
 
 export interface surfacesRowInterface {
+    yearOfData?: string,
     id: number,
     parcelId: number,
     crop: string,

@@ -1,23 +1,32 @@
+import { useState } from 'react';
+import { FarmSelectPropsType } from '../../interfaces';
 
-const FarmSelectComponent = () => {
+const FarmSelectComponent = ({ onYearChange }: FarmSelectPropsType) => {
+  const [selectedYear, setSelectedYear] = useState('2023');
 
-    return (
-        <div className='farm-select-container'>
-            <div className='year-select-container'>
-                <label htmlFor="year-select">Godina zahtjeva </label>
-                <select id="year-select">
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2022">2023</option>
-                </select>
-            </div>
+  const handleYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const year = event.target.value;
+    setSelectedYear(year);
+    onYearChange(year);
+  };
 
-            {/* <div className='farm-input-container'>
-                <label htmlFor="farm-input">Gospodarstvo </label>
-                <input type="text" />
-            </div> */}
-        </div>
-    );
+  return (
+    <div className='farm-select-container'>
+      <div className='year-select-container'>
+        <label htmlFor="year-select">Godina zahtjeva </label>
+        <select id="year-select" value={selectedYear} onChange={handleYearChange}>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+        </select>
+      </div>
+
+        {/* <div className='farm-input-container'>
+            <label htmlFor="farm-input">Gospodarstvo </label>
+            <input type="text" />
+        </div> */}
+    </div>
+  );
 };
 
 export default FarmSelectComponent;

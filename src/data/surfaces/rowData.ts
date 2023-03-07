@@ -2,6 +2,7 @@ import { surfacesRowInterface } from '../../interfaces';
 
 export const surfacesRowData: surfacesRowInterface[] = [
     {
+        yearOfData: '2023',
         id: 125132,
         parcelId: 34,
         crop: "soja",
@@ -40,6 +41,7 @@ export const surfacesRowData: surfacesRowInterface[] = [
         kntStatus: true
     },
     {
+        yearOfData: '2023',
         id: 2125132,
         parcelId: 323,
         crop: "kukuruz",
@@ -78,6 +80,7 @@ export const surfacesRowData: surfacesRowInterface[] = [
         kntStatus: false
     },
     {
+        yearOfData: '2022',
         id: 3125132,
         parcelId: 4876,
         crop: "kukuruz",
@@ -116,6 +119,7 @@ export const surfacesRowData: surfacesRowInterface[] = [
         kntStatus: true
     },
     {
+        yearOfData: '2021',
         id: 335324,
         parcelId: 56,
         crop: "ječam",
