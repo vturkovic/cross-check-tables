@@ -12,10 +12,10 @@ const FarmSelectComponent = () => {
                 </select>
             </div>
 
-            <div className='farm-input-container'>
+            {/* <div className='farm-input-container'>
                 <label htmlFor="farm-input">Gospodarstvo </label>
                 <input type="text" />
-            </div>
+            </div> */}
         </div>
     );
 };

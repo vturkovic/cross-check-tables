@@ -32,7 +32,7 @@ const TableComponent = ({ columns, data }: any) => {
                             {row.cells.map(cell => {
                                 return (
                                     <td {...cell.getCellProps()} >
-                                        {cell.render('Cell')}
+                                        {cell.value !== null ? cell.render('Cell') : '-'}
                                     </td>
                                 );
                             })}
