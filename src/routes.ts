@@ -3,14 +3,27 @@ import {
     surfacesRowData  
 } from './data/data';
 
-const filterDataByYear = (data: any, year: string) => {
+const defaultViewProps = ['id', 'parcelId', 'crop', 'surfaceApplied', 'surfaceOverlap', 'retroSurfaceOverlap', 'expEst', 'isForceMajeure', 'admin', 'control', 'inspection', 'okt', 'surfaceSeen', 'retroSurfaceSeen'];
+
+const filterColumnData = (data: any[], defaultView: boolean) => {
+    if (defaultView) {
+        return data.filter((obj: any) => {
+            return defaultViewProps.includes(obj.accessor);
+        });
+    }
+    return data;
+};
+
+
+const filterDataByYear = (data: any[], year: string) => {
     return data.filter((obj: any) => obj.yearOfData === year);
 };
 
-export const getRoutes = (yearOfData: string) => {
+
+export const getRoutes = (defaultView: boolean, yearOfData: string) => {
     return [
         { path: "/", component: null },
-        { path: "surfaces/", component: { columns: surfacesColumnData, data: filterDataByYear(surfacesRowData, yearOfData)} },
+        { path: "surfaces/", component: { columns: filterColumnData(surfacesColumnData, defaultView), data: filterDataByYear(surfacesRowData, yearOfData) } },
         { path: "pvp-p/", component: { columns: surfacesColumnData, data: surfacesRowData } },
         { path: "pvp-v/", component: { columns: surfacesColumnData, data: surfacesRowData } },
         { path: "pvp-sr/", component: { columns: surfacesColumnData, data: surfacesRowData } },

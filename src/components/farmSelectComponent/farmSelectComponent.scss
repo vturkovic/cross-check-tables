@@ -1,7 +1,7 @@
 .farm-select-container {
 
     display: flex;
-    height: 40px;
+    height: 50px;
     align-items: center;
     padding-left: 50px;
 
@@ -10,12 +10,25 @@
     }
 
     select {
-        margin-left: 2px;
+        margin-left: 5px;
         height: 26px;
     }
 
     input {
         height: 20px;
         width: 60px;
+    }
+
+    .switch-container {
+        display: flex;
+
+        div {
+            margin-left: 5px;
+        }
+    }
+
+    .form-check-input:checked {
+        background-color: #7fa4c7;
+        border-color: #7fa4c7;
     }
 }

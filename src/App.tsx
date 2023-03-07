@@ -9,9 +9,14 @@ import { getRoutes } from './routes';
 const App = () => {
 
   const [selectedYear, setSelectedYear] = useState('2023');
+  const [defaultView, setdefaultView] = useState(true);
 
   const handleYearChange = (year: string) => {
     setSelectedYear(year);
+  };
+
+  const handleDefaultViewChange = (isChecked: boolean) => {
+    setdefaultView(isChecked);
   };
 
   return (
@@ -21,9 +26,9 @@ const App = () => {
           <SidebarComponent />
         </div>
         <div className='content-container'>
-            <FarmSelectComponent onYearChange={handleYearChange}/>
+            <FarmSelectComponent onYearChange={handleYearChange} onDefaultViewChange={handleDefaultViewChange}/>
             <Routes>
-              {getRoutes(selectedYear).map((route, index) => (
+              {getRoutes(defaultView, selectedYear).map((route, index) => (
                 <Route key={index} path={route.path} element={
                   route.component === null ? null :
                   route.component.navigate ? <Navigate to={route.component.to} /> :

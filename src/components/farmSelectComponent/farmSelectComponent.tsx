@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { FarmSelectPropsType } from '../../interfaces';
+import Form from 'react-bootstrap/Form';
 
-const FarmSelectComponent = ({ onYearChange }: FarmSelectPropsType) => {
+const FarmSelectComponent = ({ onYearChange, onDefaultViewChange }: FarmSelectPropsType) => {
   const [selectedYear, setSelectedYear] = useState('2023');
 
   const handleYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -10,8 +11,13 @@ const FarmSelectComponent = ({ onYearChange }: FarmSelectPropsType) => {
     onYearChange(year);
   };
 
+  const handleSwitchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    onDefaultViewChange(event.target.checked);
+  };
+
   return (
     <div className='farm-select-container'>
+      
       <div className='year-select-container'>
         <label htmlFor="year-select">Godina zahtjeva </label>
         <select id="year-select" value={selectedYear} onChange={handleYearChange}>
@@ -21,10 +27,16 @@ const FarmSelectComponent = ({ onYearChange }: FarmSelectPropsType) => {
         </select>
       </div>
 
-        {/* <div className='farm-input-container'>
-            <label htmlFor="farm-input">Gospodarstvo </label>
-            <input type="text" />
-        </div> */}
+      <Form className='switch-container'>
+        <Form.Check 
+          type="switch"
+          id="custom-switch"
+          label="Detaljni prikaz"
+          defaultChecked={true}
+          onChange={handleSwitchChange}
+        />
+      </Form>
+
     </div>
   );
 };

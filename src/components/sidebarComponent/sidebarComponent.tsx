@@ -116,7 +116,9 @@ export const SidebarComponent = () => {
             </SubMenu>
           </Menu>
       </Sidebar>
-      <button className={collapseButton ? 'collapseButton open': 'collapseButton'} onClick={handleCollapseButtonClick}>{SIDEBAR_COLLAPSE_BUTTON_CONTENT}</button>
+      <div className={collapseButton ? 'collapseButton open': 'collapseButton'} onClick={handleCollapseButtonClick}>
+         <i>{SIDEBAR_COLLAPSE_BUTTON_CONTENT}</i>
+      </div>
     </div>
     );
 };

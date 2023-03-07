@@ -1,5 +1,6 @@
 export type FarmSelectPropsType = {
     onYearChange: (year: string) => void;
+    onDefaultViewChange: (isChecked: boolean) => void;
 };
 
 export interface surfacesColumnInterface {
@@ -23,27 +24,27 @@ export interface surfacesRowInterface {
     okt: number | null,
     surfaceSeen: number,
     retroSurfaceSeen: number | null,
-    reduction: number,
-    interpretation: string,
-    ppMines: number | null,
-    ppArkod: number | null,
-    ppKnt: number | null,
-    ppRfv: null,
-    ppNpp: null,
-    ppRetro: null,
-    ppToleration: null,
-    ppTolerationRetro: null,
-    ejSentinel: boolean | null,
-    ejSatelite: boolean | null,
-    ejDocumentation: boolean | null,
-    ejGTF: null,
-    ejTP: boolean | null,
-    monitoring: string,
-    expert: string,
-    visaSila: boolean | null,
-    adminOdluka: boolean | null,
-    adminDecisionRetro: boolean | null,
-    odlukaRetro: null,
-    kntStatus: boolean
+    reduction?: number,
+    interpretation?: string,
+    ppMines?: number | null,
+    ppArkod?: number | null,
+    ppKnt?: number | null,
+    ppRfv?: null,
+    ppNpp?: null,
+    ppRetro?: null,
+    ppToleration?: null,
+    ppTolerationRetro?: null,
+    ejSentinel?: boolean | null,
+    ejSatelite?: boolean | null,
+    ejDocumentation?: boolean | null,
+    ejGTF?: null,
+    ejTP?: boolean | null,
+    monitoring?: string,
+    expert?: string,
+    visaSila?: boolean | null,
+    adminOdluka?: boolean | null,
+    adminDecisionRetro?: boolean | null,
+    odlukaRetro?: null,
+    kntStatus?: boolean
 }
 
