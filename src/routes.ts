@@ -1,5 +1,7 @@
-import { surfacesColumnData } from "./data/surfaces/columnData";
-import { surfacesRowData } from "./data/surfaces/rowData";
+import { 
+    surfacesColumnData, 
+    surfacesRowData  
+} from './data/data';
 
 const filterDataByYear = (data: any, year: string) => {
     return data.filter((obj: any) => obj.yearOfData === year);

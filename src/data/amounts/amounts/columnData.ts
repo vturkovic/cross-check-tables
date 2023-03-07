@@ -1,4 +1,4 @@
-import { surfacesColumnInterface } from "../../interfaces";
+import { surfacesColumnInterface } from "../../../interfaces";
 
 export const surfacesColumnData: surfacesColumnInterface[] = [
     {
