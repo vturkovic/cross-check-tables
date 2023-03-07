@@ -38,20 +38,53 @@ table {
   user-select: none;
 }
 table thead th {
-  background: #E9E9E9;
   color: black;
-  padding: 5px;
+  padding: 10px;
+  background: #E9E9E9;
 }
 table tbody td {
   padding: 10px;
 }
+table .sticky {
+  position: sticky !important;
+  left: 3px;
+  top: 0;
+  z-index: 1;
+}
+table .sticky:nth-of-type(2) {
+  left: 86px;
+}
+table .sticky:nth-of-type(3) {
+  left: 173px;
+}
+table .sticky:nth-of-type(4) {
+  left: 267px;
+}
+table .sticky:nth-of-type(5) {
+  left: 370px;
+}
+table .sticky:nth-of-type(6) {
+  left: 484px;
+}
+table .sticky:nth-of-type(7) {
+  left: 598px;
+}
+table .sticky:nth-of-type(8) {
+  left: 707px;
+}
 
 .even {
-  background: #9EC1E1;
+  background: #aaaaaa;
+}
+.even .sticky {
+  background: #aaaaaa;
 }
 
 .odd {
-  background: #DBDBDB;
+  background: #ebebeb;
+}
+.odd .sticky {
+  background: #ebebeb;
 }
 
 .farm-select-container {

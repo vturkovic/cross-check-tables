@@ -16,8 +16,11 @@ const TableComponent = ({ columns, data }: any) => {
                 <thead>
                     {headerGroups.map(headerGroup => (
                         <tr {...headerGroup.getHeaderGroupProps()}>
-                            {headerGroup.headers.map(column => (
-                                <th {...column.getHeaderProps()}>
+                            {headerGroup.headers.map((column, index) => (
+                                <th
+                                    {...column.getHeaderProps()}
+                                    className={index < 8 ? "sticky" : ""}
+                                >
                                     {column.render('Header')}
                                 </th>
                             ))}
@@ -30,9 +33,12 @@ const TableComponent = ({ columns, data }: any) => {
                         const rowClassName = index % 2 === 0 ? 'even' : 'odd';
                         return (
                             <tr {...row.getRowProps()} className={rowClassName}>
-                                {row.cells.map(cell => {
+                                {row.cells.map((cell, index) => {
                                     return (
-                                        <td {...cell.getCellProps()} >
+                                        <td
+                                            {...cell.getCellProps()}
+                                            className={index < 8 ? "sticky" : ""}
+                                        >
                                             {cell.value !== null ? cell.render('Cell') : '-'}
                                         </td>
                                     );
@@ -45,5 +51,6 @@ const TableComponent = ({ columns, data }: any) => {
         </div>
     );
 };
+
 
 export default TableComponent;
