@@ -2,7 +2,7 @@ import { columnInterface } from "../../../interfaces";
 
 const DEFAULT_COLUMN_WIDTH = 100;
 
-export const ekopColumnData: columnInterface[] = [
+export const tvpvColumnData: columnInterface[] = [
     {
         Header: "ARKOD ID",
         accessor: "id",

@@ -1,140 +1,51 @@
-import { surfacesColumnInterface } from "../../../interfaces";
+import { columnInterface } from "../../../interfaces";
 
-export const surfacesColumnData: surfacesColumnInterface[] = [
+const DEFAULT_COLUMN_WIDTH = 140;
+
+export const cattleColumnData: columnInterface[] = [
     {
-        Header: "ARKOD ID",
-        accessor: "id",
+        Header: "R/B",
+        accessor: "rb",
+        width: DEFAULT_COLUMN_WIDTH
     },
     {
-        Header: "ID PARCELE",
-        accessor: "parcelId",
+        Header: "JMBG",
+        accessor: "jmbg",
+        width: DEFAULT_COLUMN_WIDTH
     },
     {
-        Header: "KULTURA",
-        accessor: "crop",
+        Header: "ID GRLA",
+        accessor: "idGrla",
+        width: DEFAULT_COLUMN_WIDTH
     },
     {
-        Header: "PRIJAV. POVRŠINA",
-        accessor: "surfaceApplied",
+        Header: "VRSTA",
+        accessor: "vrsta",
+        width: DEFAULT_COLUMN_WIDTH
     },
     {
-        Header: "SMANJENJE",
-        accessor: "reduction",
+        Header: "PASMINA",
+        accessor: "pasmina",
+        width: DEFAULT_COLUMN_WIDTH
     },
     {
-        Header: "SMANJENJE (RETRO)",
-        accessor: "",
+        Header: "DATUM ROĐENJA",
+        accessor: "datumRodenja",
+        width: DEFAULT_COLUMN_WIDTH
     },
     {
-        Header: "UTVRĐENA POVRŠINA",
-        accessor: "surfaceSeen",
+        Header: "DATUM IZLUČENJA",
+        accessor: "datumIzlucenja",
+        width: DEFAULT_COLUMN_WIDTH
     },
     {
-        Header: "UTVRĐENA POVRŠINA (RETRO)",
-        accessor: "retroSurfaceSeen",
+        Header: "KONTROLA MLIJEČNOSTI",
+        accessor: "kontrolaMlijecnosti",
+        width: DEFAULT_COLUMN_WIDTH
     },
     {
-        Header: "PROSTORNI PREKLOP",
-        accessor: "surfaceOverlap",
-    },
-    {
-        Header: "PROSTORNI PREKLOP (RETRO)",
-        accessor: "retroSurfaceOverlap",
-    },
-    {
-        Header: "EXPERTNA PROCJENA",
-        accessor: "expEst",
-    },
-    {
-        Header: "INSPEKCIJA",
-        accessor: "inspection",
-    },
-    {
-        Header: "VIŠA SILA",
-        accessor: "visaSila",
-    },
-    {
-        Header: "ADMIN. ODLUKA",
-        accessor: "adminOdluka",
-    },
-    {
-        Header: "ADMIN. ODLUKA (RETRO)",
-        accessor: "adminOdlukaRetro",
-    },
-    {
-        Header: "KONTROLA NA TERENU",
-        accessor: "control",
-    },
-    {
-        Header: "OKT",
-        accessor: "okt",
-    },
-    {
-        Header: "PP MINE",
-        accessor: "ppMines",
-    },
-    {
-        Header: "PP ARKOD",
-        accessor: "ppArkod",
-    },
-    {
-        Header: "PP KNT",
-        accessor: "ppKnt",
-    },
-    {
-        Header: "PP RFV",
-        accessor: "ppRfv",
-    },
-    {
-        Header: "PP NPP",
-        accessor: "ppNpp",
-    },
-    {
-        Header: "PP RETRO",
-        accessor: "ppRetro",
-    },
-    {
-        Header: "PP TOLERANCA",
-        accessor: "ppToleration",
-    },
-    {
-        Header: "PP TOLERANCA (RETRO)",
-        accessor: "ppTolerationRetro",
-    },
-    {
-        Header: "EJ SENTINEL",
-        accessor: "ejSentinel",
-    },
-    {
-        Header: "EJ SATELIT",
-        accessor: "ejSatelite",
-    },
-    {
-        Header: "DOKUMENTACIJA",
-        accessor: "ejDocumentation",
-    },
-    {
-        Header: "EJ GTF",
-        accessor: "ejGTF",
-    },
-    {
-        Header: "EJ TP",
-        accessor: "ejTP",
-    },
-    {
-        Header: "MONITORING",
-        accessor: "monitoring",
-    },
-    {
-        Header: "EXPERTNA PROVJERA",
-        accessor: "",
-    },
-    {
-        Header: "INSPEKCIJSKO RJEŠENJE",
-        accessor: "",
-    },
-    {
-        Header: "KNT STATUS",
-        accessor: "kntStatus",
+        Header: "PRIHVATLJIVO",
+        accessor: "prihvatljivo",
+        width: DEFAULT_COLUMN_WIDTH
     }
 ];

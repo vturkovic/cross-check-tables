@@ -1,6 +1,6 @@
 import { surfacesRowInterface } from '../../../interfaces';
 
-export const pvpKPURowData: surfacesRowInterface[] = [
+export const tvpvRowData: surfacesRowInterface[] = [
     {
         yearOfData: '2023',
         id: 125132,

@@ -71,6 +71,18 @@
         .rt-tr.-even .sticky {
             background-color: white;
         }
+
+        .rt-td {
+            .green {
+                font-weight: bold;
+                color: green;
+            }
+    
+            .red {
+                font-weight: bold;
+                color: red;
+            }
+        }
     }
 
 }

@@ -3,7 +3,7 @@ export type FarmSelectPropsType = {
     onDefaultViewChange: (isChecked: boolean) => void;
 };
 
-export interface surfacesColumnInterface {
+export interface columnInterface {
     Header: string,
     accessor: string,
     className?: string,
@@ -52,3 +52,15 @@ export interface surfacesRowInterface {
     kntStatus?: boolean
 }
 
+export interface cattleRowInterface {
+    yearOfData: string,
+    rb: number,
+    jmbg: number,
+    idGrla: number,
+    vrsta: string, 
+    pasmina: string,
+    datumRodenja: string,
+    datumIzlucenja: string,
+    kontrolaMlijecnosti: boolean,
+    prihvatljivo: boolean,
+}

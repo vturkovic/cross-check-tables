@@ -1,6 +1,6 @@
 import { surfacesRowInterface } from '../../../interfaces';
 
-export const surfacesRowData: surfacesRowInterface[] = [
+export const mukRowData: surfacesRowInterface[] = [
     {
         yearOfData: '2023',
         id: 125132,

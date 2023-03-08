@@ -1,8 +1,8 @@
-import { surfacesColumnInterface } from "../../../interfaces";
+import { columnInterface } from "../../../interfaces";
 
 const DEFAULT_COLUMN_WIDTH = 100;
 
-export const surfacesColumnData: surfacesColumnInterface[] = [
+export const surfacesColumnData: columnInterface[] = [
     {
         Header: "ARKOD ID",
         accessor: "id",

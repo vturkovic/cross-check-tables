@@ -107,72 +107,15 @@
 .table-container .ReactTable .rt-tr.-even .sticky {
   background-color: white;
 }
-
-/* table {
-    width: 100%;
-    border: 1px solid black;
-    user-select: none;
-
-
-    thead {
-        th {
-            color: black;
-            padding: 10px;
-            background: #E9E9E9;
-        }
-    }
-
-    tbody {
-        td {
-            padding: 10px;
-        }
-    }
-
-    .sticky {
-        position: sticky !important;
-        left: 3px;
-        top: 0;
-        z-index: 1;
-    }
-
-    .sticky:nth-of-type(2) {
-        left: 86px;
-    }
-    .sticky:nth-of-type(3) {
-        left: 173px;
-    }
-    .sticky:nth-of-type(4) {
-        left: 267px;
-    }
-    .sticky:nth-of-type(5) {
-        left: 370px;
-    }
-    .sticky:nth-of-type(6) {
-        left: 484px;
-    }
-    .sticky:nth-of-type(7) {
-        left: 598px;
-    }
-    .sticky:nth-of-type(8) {
-        left: 707px;
-    }
+.table-container .ReactTable .rt-td .green {
+  font-weight: bold;
+  color: green;
+}
+.table-container .ReactTable .rt-td .red {
+  font-weight: bold;
+  color: red;
 }
 
-.even {
-    background: #aaaaaa; 
-
-    .sticky {
-        background: #aaaaaa; 
-    }
-}
-
-.odd {
-    background:#ebebeb;
-
-    .sticky {
-        background:#ebebeb;
-    }
-} */
 .farm-select-container {
   display: flex;
   height: 50px;
