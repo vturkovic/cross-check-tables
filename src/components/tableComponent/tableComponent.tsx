@@ -1,4 +1,4 @@
-import { useTable } from 'react-table';
+/* import { useTable } from 'react-table';
  
 const TableComponent = ({ columns, data }: any) => {
 
@@ -52,5 +52,24 @@ const TableComponent = ({ columns, data }: any) => {
     );
 };
 
+
+export default TableComponent; */
+
+import ReactTable from "react-table";
+import "react-table/react-table.css";
+
+const TableComponent = ({ data, columns }: any) => {
+
+  return (
+    <div className="table-container" style={{overflowX: 'auto'}}>
+      <ReactTable
+        data={data}
+        showPagination={false}
+        defaultPageSize={5}
+        className="-striped -highlight"
+        columns={columns} />
+    </div>
+  );
+};
 
 export default TableComponent;

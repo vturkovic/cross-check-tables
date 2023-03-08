@@ -1,69 +1,76 @@
 .table-container {
-    margin: 0px 15px;
-}
 
-table {
-    width: 100%;
-    border: 1px solid black;
-    user-select: none;
+    .ReactTable {
+        font-size: 13px;
+        overflow: visible !important;
 
+        .rt-thead {
+            font-weight: bold;
+        }
 
-    thead {
-        th {
-            color: black;
-            padding: 10px;
-            background: #E9E9E9;
+        .rt-tbody {
+            overflow: visible;
+        }
+
+        .rt-th {    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: pre-wrap;
+        }
+
+        .rt-td {
+            display: flex;
+            justify-content: center;
+        }
+
+        .sticky {
+            position: sticky !important;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .sticky:nth-of-type(2) {
+            left: 100px;
+        }
+        
+        .sticky:nth-of-type(3) {
+            left: 200px;
+        }
+        
+        .sticky:nth-of-type(4) {
+            left: 300px;
+        }
+
+        .sticky:nth-of-type(5) {
+            left: 400px;
+        }
+
+        .sticky:nth-of-type(6) {
+            left: 500px;
+        }
+
+        .sticky:nth-of-type(7) {
+            left: 600px;
+        }
+
+        .sticky:nth-of-type(8) {
+            left: 700px;
+        }
+        
+        .rt-thead .sticky {
+            background-color: white;
+        }
+
+        .rt-tr.-odd .sticky {
+            background-color: rgb(247 247 247);
+        
+        }
+        
+        .rt-tr.-even .sticky {
+            background-color: white;
         }
     }
 
-    tbody {
-        td {
-            padding: 10px;
-        }
-    }
-
-    .sticky {
-        position: sticky !important;
-        left: 3px;
-        top: 0;
-        z-index: 1;
-    }
-
-    .sticky:nth-of-type(2) {
-        left: 86px;
-    }
-    .sticky:nth-of-type(3) {
-        left: 173px;
-    }
-    .sticky:nth-of-type(4) {
-        left: 267px;
-    }
-    .sticky:nth-of-type(5) {
-        left: 370px;
-    }
-    .sticky:nth-of-type(6) {
-        left: 484px;
-    }
-    .sticky:nth-of-type(7) {
-        left: 598px;
-    }
-    .sticky:nth-of-type(8) {
-        left: 707px;
-    }
-}
-
-.even {
-    background: #aaaaaa; 
-
-    .sticky {
-        background: #aaaaaa; 
-    }
-}
-
-.odd {
-    background:#ebebeb;
-
-    .sticky {
-        background:#ebebeb;
-    }
 }

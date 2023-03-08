@@ -5,7 +5,11 @@ export type FarmSelectPropsType = {
 
 export interface surfacesColumnInterface {
     Header: string,
-    accessor: string
+    accessor: string,
+    className?: string,
+    headerClassName?: string,
+    width?: number
+    sticky?: boolean
 }
 
 export interface surfacesRowInterface {
