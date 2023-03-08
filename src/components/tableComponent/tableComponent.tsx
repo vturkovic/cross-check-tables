@@ -7,6 +7,14 @@ const TableComponent = ({ data, columns }: any) => {
 
     const [pageSize, setPageSize] = useState(0);
 
+    const VALUE_CLASS_MAP: {[key: string]: string} = {
+      DA: 'green',
+      green: 'green',
+      NE: 'red',
+      red: 'red',
+      yellow: 'yellow',
+    };
+    
     useEffect(() => {
         setPageSize(data.length);
     }, [data]);
@@ -29,6 +37,10 @@ const TableComponent = ({ data, columns }: any) => {
             return newObj;
         });
     };
+
+    const getRowClass = (value: string): string => {
+      return VALUE_CLASS_MAP[value] ?? '';
+    };
       
   return (
     <div className="table-container" style={{ overflowX: "auto" }}>
@@ -42,7 +54,7 @@ const TableComponent = ({ data, columns }: any) => {
               return {
                 ...column,
                 Cell: ({ value}:any ) => (
-                  <div className={`${value === 'DA' ? 'green': (value === 'NE' ? 'red': '')}`}>
+                  <div className={getRowClass(value)}>
                     {value}
                   </div>
                 )

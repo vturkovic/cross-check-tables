@@ -115,6 +115,10 @@
   font-weight: bold;
   color: red;
 }
+.table-container .ReactTable .rt-td .yellow {
+  font-weight: bold;
+  color: yellow;
+}
 
 .farm-select-container {
   display: flex;
