@@ -48,9 +48,14 @@ const TableComponent = ({ data, columns }: any) => {
         data={transformData(data)}
         showPagination={false}
         pageSize={pageSize}
-        className="-striped -highlight"
+        className='-striped -highlight'
         columns={[
             ...columns.map((column:any) => {
+              if (column.accessor === 'retroSurfaceSeen') {
+                console.log('column', column)
+                column.className = 'sticky border-right'
+                column.headerClassName = 'sticky border-right'
+              }
               return {
                 ...column,
                 Cell: ({ value}:any ) => (

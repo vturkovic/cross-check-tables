@@ -24,6 +24,10 @@
             justify-content: center;
         }
 
+        .border-right {
+            border-right: 1px solid rgb(167, 167, 167) !important;
+        }
+
         .sticky {
             position: sticky !important;
             left: 0;
@@ -58,7 +62,7 @@
         .sticky:nth-of-type(8) {
             left: 700px;
         }
-        
+
         .rt-thead .sticky {
             background-color: white;
         }

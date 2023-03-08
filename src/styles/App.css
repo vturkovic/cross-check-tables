@@ -71,6 +71,9 @@
   display: flex;
   justify-content: center;
 }
+.table-container .ReactTable .border-right {
+  border-right: 1px solid rgb(167, 167, 167) !important;
+}
 .table-container .ReactTable .sticky {
   position: sticky !important;
   left: 0;
