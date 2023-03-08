@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './styles/App.css';
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import SidebarComponent from './components/sidebarComponent/sidebarComponent';
 import FarmSelectComponent from './components/farmSelectComponent/farmSelectComponent';
 import TableComponent from './components/tableComponent/tableComponent';
@@ -20,25 +20,25 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <div className='app'>
-        <div className='sidebar-container'>
-          <SidebarComponent />
-        </div>
-        <div className='content-container'>
-            <FarmSelectComponent onYearChange={handleYearChange} onDefaultViewChange={handleDefaultViewChange}/>
-            <Routes>
-              {getRoutes(detailedView, selectedYear).map((route, index) => (
-                <Route key={index} path={route.path} element={
-                  route.component === null ? null :
-                  route.component.navigate ? <Navigate to={route.component.to} /> :
-                  <TableComponent columns={route.component.columns} data={route.component.data} />
-                } />
-              ))}
-            </Routes>
-        </div>
+    <div className='app'>
+      <div className='sidebar-container'>
+        <SidebarComponent />
       </div>
-    </Router>
+      <div className='content-container'>
+        <Routes>  
+          {getRoutes(detailedView, selectedYear).map((route, index) => (
+            <Route key={index} path={route.path} element={
+              route.component === null ? null :
+              route.component.navigate ? <Navigate to={route.component.to} /> :
+              <div>
+                <FarmSelectComponent onYearChange={handleYearChange} onDefaultViewChange={handleDefaultViewChange} />
+                <TableComponent columns={route.component.columns} data={route.component.data} />
+              </div>
+            } />
+          ))}
+        </Routes>
+      </div>
+    </div>
   );
 };
 
