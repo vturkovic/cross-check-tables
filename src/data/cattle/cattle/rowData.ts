@@ -26,7 +26,7 @@ export const cattleRowData: cattleRowInterface[] = [
         prihvatljivo: true,
     },
     {
-        yearOfData: '2022',
+        yearOfData: '2023',
         rb: 3,
         jmbg: 8765,
         idGrla: 345345,
@@ -38,7 +38,7 @@ export const cattleRowData: cattleRowInterface[] = [
         prihvatljivo: true,
     },
     {
-        yearOfData: '2021',
+        yearOfData: '2022',
         rb: 4,
         jmbg: 9336,
         idGrla: 456456,
@@ -47,6 +47,18 @@ export const cattleRowData: cattleRowInterface[] = [
         datumRodenja: 'Redovno popunjavanje',
         datumIzlucenja: '',
         kontrolaMlijecnosti: false,
+        prihvatljivo: true,
+    },
+    {
+        yearOfData: '2021',
+        rb: 5,
+        jmbg: 8765,
+        idGrla: 345345,
+        vrsta: 'SVINJE', 
+        pasmina: '884-22-012',
+        datumRodenja: 'Redovno popunjavanje',
+        datumIzlucenja: '',
+        kontrolaMlijecnosti: true,
         prihvatljivo: true,
     }
 ];

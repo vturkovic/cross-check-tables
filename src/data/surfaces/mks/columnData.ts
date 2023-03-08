@@ -91,7 +91,7 @@ export const mksColumnData: columnInterface[] = [
     },
     {
         Header: "ADMIN. ODLUKA (RETRO)",
-        accessor: "adminOdlukaRetro",
+        accessor: "adminDecisionRetro",
         width: DEFAULT_COLUMN_WIDTH 
     },
     {
@@ -181,7 +181,7 @@ export const mksColumnData: columnInterface[] = [
     },
     {
         Header: "INSPEKCIJSKO RJEŠENJE",
-        accessor: "inscpection",
+        accessor: "inspection",
         width: DEFAULT_COLUMN_WIDTH 
     },
     {

@@ -91,7 +91,7 @@ export const pvpSRColumnData: columnInterface[] = [
     },
     {
         Header: "ADMIN. ODLUKA (RETRO)",
-        accessor: "adminOdlukaRetro",
+        accessor: "adminDecisionRetro",
         width: DEFAULT_COLUMN_WIDTH 
     },
     {
@@ -181,7 +181,7 @@ export const pvpSRColumnData: columnInterface[] = [
     },
     {
         Header: "INSPEKCIJSKO RJEŠENJE",
-        accessor: "inscpection",
+        accessor: "inspection",
         width: DEFAULT_COLUMN_WIDTH 
     },
     {

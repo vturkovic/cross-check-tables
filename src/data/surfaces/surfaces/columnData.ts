@@ -40,7 +40,7 @@ export const surfacesColumnData: columnInterface[] = [
     },
     {
         Header: "SMANJENJE (RETRO)",
-        accessor: "reducationRetro",
+        accessor: "reduction",
         className: "sticky",
         headerClassName: "sticky",
         width: DEFAULT_COLUMN_WIDTH 
@@ -91,7 +91,7 @@ export const surfacesColumnData: columnInterface[] = [
     },
     {
         Header: "ADMIN. ODLUKA (RETRO)",
-        accessor: "adminOdlukaRetro",
+        accessor: "adminDecisionRetro",
         width: DEFAULT_COLUMN_WIDTH 
     },
     {
@@ -181,7 +181,7 @@ export const surfacesColumnData: columnInterface[] = [
     },
     {
         Header: "INSPEKCIJSKO RJEŠENJE",
-        accessor: "inscpection",
+        accessor: "inspection",
         width: DEFAULT_COLUMN_WIDTH 
     },
     {
