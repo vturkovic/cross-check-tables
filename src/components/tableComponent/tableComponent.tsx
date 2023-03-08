@@ -20,6 +20,8 @@ const TableComponent = ({ data, columns }: any) => {
                     newObj[prop] = value ? 'DA' : 'NE';
                 } else if (value === null) {
                     newObj[prop] = '-';
+                } else if (value === '') {
+                  newObj[prop] = '-';
                 } else {
                     newObj[prop] = value;
                 }

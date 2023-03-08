@@ -20,23 +20,22 @@ const FarmSelectComponent = ({ onYearChange, onDefaultViewChange }: FarmSelectPr
       
       <div className='year-select-container'>
         <label htmlFor="year-select">Godina zahtjeva </label>
-        <select id="year-select" value={selectedYear} onChange={handleYearChange}>
+        <Form.Select id="year-select" value={selectedYear} onChange={handleYearChange}>
           <option value="2023">2023</option>
           <option value="2022">2022</option>
           <option value="2021">2021</option>
-        </select>
+        </Form.Select>
       </div>
 
       <Form className='switch-container'>
+        <label htmlFor="custom-switch">Detaljni prikaz </label>
         <Form.Check 
           type="switch"
           id="custom-switch"
-          label="Detaljni prikaz"
           defaultChecked={false}
-          onChange={handleSwitchChange}
-        />
+          onChange={handleSwitchChange} />
       </Form>
-
+      
     </div>
   );
 };

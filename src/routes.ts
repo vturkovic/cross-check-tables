@@ -64,22 +64,3 @@ export const getRoutes = (detailedView: boolean, yearOfData: string) => {
         { path: "*", component: { navigate: true, to: "/" } },
     ];
 };
-
-export const routes = [
-    { path: "/", component: null },
-    { path: "surfaces/", component: { columns: surfacesColumnData, data: filterDataByYear(surfacesRowData, '2023')} },
-    { path: "pvp-p/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "pvp-v/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "pvp-sr/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "pvp-kpu/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "kfk/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "muk/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "mkš/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "tvpv/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "ekop/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "eko/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "cattle/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "amounts/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "ezp/", component: { columns: surfacesColumnData, data: surfacesRowData } },
-    { path: "*", component: { navigate: true, to: "/" } },
-];
