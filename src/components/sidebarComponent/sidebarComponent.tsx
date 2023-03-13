@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Sidebar, Menu, MenuItem, SubMenu, useProSidebar } from 'react-pro-sidebar';
 import { Link } from 'react-router-dom';
 
-export const SidebarComponent = () => {
+export const SidebarComponent = (props: {isAuthenticated: boolean})  => {
 
   const { collapseSidebar } = useProSidebar();
 
@@ -27,7 +27,7 @@ export const SidebarComponent = () => {
     <div className='sidebar-container'>
       <Sidebar className="sidebar" width={SIDEBAR_WIDTH} collapsedWidth={SIDEBAR_COLLAPSED_WIDTH} transitionDuration={SIDEBAR_TRANSITION_DURATION}>
         <Menu>
-          <SubMenu label="Unakrsne provjere" defaultOpen={false} className='submenu'>
+          <SubMenu disabled={!props.isAuthenticated} label="Unakrsne provjere" defaultOpen={false} className='submenu'>
 
             <SubMenu label="Površine" defaultOpen={false} className='sub2menu'>
               <SubMenu label="Proizvodno nevezane potpore" defaultOpen={false} className='sub3menu'>

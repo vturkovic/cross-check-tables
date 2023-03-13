@@ -8,6 +8,7 @@ import { getRoutes } from './routes';
 
 const App = () => {
 
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [selectedYear, setSelectedYear] = useState('2023');
   const [detailedView, setDetailedView] = useState(false);
 
@@ -22,11 +23,11 @@ const App = () => {
   return (
     <div className='app'>
       <div className='sidebar-container'>
-        <SidebarComponent />
+        <SidebarComponent isAuthenticated={isAuthenticated} />
       </div>
       <div className='content-container'>
         <Routes>  
-          {getRoutes(detailedView, selectedYear).map((route, index) => (
+          {getRoutes(isAuthenticated, detailedView, selectedYear).map((route, index) => (
             <Route key={index} path={route.path} element={
               route.component === null ? null :
               route.component.navigate ? <Navigate to={route.component.to} /> :
@@ -36,6 +37,9 @@ const App = () => {
               </div>
             } />
           ))}
+          {!isAuthenticated && (
+            <Route path="*" element={<Navigate to="/" replace />} />
+          )}
         </Routes>
       </div>
     </div>

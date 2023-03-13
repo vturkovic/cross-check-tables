@@ -44,7 +44,14 @@ const filterDataByYear = (data: any[], year: string) => {
     return data.filter((obj: any) => obj.yearOfData === year);
 };
 
-export const getRoutes = (detailedView: boolean, yearOfData: string) => {
+export const getRoutes = (isAuthenticated: boolean, detailedView: boolean, yearOfData: string) => {
+
+    if (!isAuthenticated) {
+        return [
+            { path: "/", component: null }
+        ]
+    }
+
     return [
         { path: "/", component: null },
         { path: "surfaces/", component: { columns: filterColumnData(surfacesColumnData, detailedView, surfacesDefaultViewProps), data: filterDataByYear(surfacesRowData, yearOfData) } },
